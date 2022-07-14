@@ -1,0 +1,486 @@
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: white;
+}
+
+
+/* + Detail {{{ */
+
+
+.detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    /*height: 100%;*/
+    height: 100vh;
+
+    /*overflow: hidden;*/
+    /*overflow: scroll;*/
+}
+
+.detailSlide {
+    height: 100%;
+
+    font-family: 'Exo 2', Hero, sans-serif;
+    text-transform: uppercase;
+
+    background-image: url("images/starburst.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    color: rgb(68, 66, 66);
+
+}
+
+.detailSlide img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.detailSlide img.narrow {
+    max-width: 100%;
+}
+
+/*@media screen and (max-width: 1050px) {
+    .detailSlide img {
+        max-width: 85%;
+    }
+
+    .detailSlide img.narrow {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .detailSlide img {
+        max-width: 80%;
+    }
+
+    .detailSlide img.narrow {
+        max-width: 68%;
+    }
+}*/
+
+
+.detailSlide .overlay {
+    opacity: 0.0;
+}
+
+.detailSlide .overlay.show {
+    opacity: 1.0;
+    transition: opacity 2.0s;
+}
+
+.detailSlide .text {
+    text-align: center;
+    /*padding-top: 3.3vw;*/
+    position: relative;
+
+    left: 12%;
+    width: 35%;
+    z-index: 1;
+    height: 87.5vh;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media screen and (max-width: 700px) {
+    .detailSlide .text {
+        width: 60%;
+        left: 17.5%;
+    }
+}
+
+
+
+.detailSlide .role {
+    font-size: 1.3vw;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    transform: scaleX(0.86) translateX(-50%);
+    transform-origin: left;
+    position: absolute;
+    top: 3vw;
+    left: 50%;
+    width: 100%;
+}
+
+.detailSlide .name {
+    /*margin-top: 1vw;*/
+
+    /*font-size: 9vw;*/
+    /*line-height: 6.5vw;*/
+    font-weight: 700;
+
+    background-image: url("images/gold_texture.png");
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: bottom;
+    color: rgba(255, 255, 255, 0);
+
+
+    position: absolute;
+    left: 50%;
+    top: 5.0vw;
+    transform: translateX(-50%) scaleX(0.85);
+    width: 200%;
+
+    /*To avoid name clipping*/
+    min-width: 60vmin;
+    overflow: visible;
+
+}
+
+.detailSlide .name .first-name {
+    margin: -0.07em 0 0 0;
+    padding: 0;
+    font-size: 4.1vw;
+    line-height: 1.0em;
+}
+
+.detailSlide .name .last-name {
+    margin: 0 0 0 0;
+    padding: 0;
+    font-size: 3.48vw;
+    line-height: 1.2em;
+
+}
+
+.detailSlide .bio {
+    /*margin-top: 40px;*/
+    font-size: 0.8vw;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-shadow: -1px -1px 8px rgba(255,255,255,255), 0px 0px 3px rgba(255,255,255,255);
+    color: #555;
+    letter-spacing: 1px;
+    /* scrollbar handled by perfect-scroll.js */
+    overflow: hidden;
+
+    flex: 1;
+    position: absolute;
+    top: 13.5vw;
+    height: calc(100vh - 13.5vw);
+}
+
+.detailSlide .bio.noFirstName {
+    top: 9vw;
+}
+
+.detailSlide .bio p:last-of-type {
+    margin-bottom: 92px;
+}
+
+.closeButton {
+    display: none;
+}
+
+
+
+/* Mobile format */
+
+
+
+
+
+/*@media screen and (max-width: 950px) {
+    .detailSlide .name {
+        font-size: 40px;
+    }
+
+    .detailSlide .bio {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    .detailSlide .name {
+        font-size: 30px;
+    }
+
+    .detailSlide .bio {
+        font-size: 1.8vmin;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .detailSlide .name {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-height: 550px) and (min-width: 950px) {
+.detailSlide .role {
+    font-size: 17.4px;
+}
+
+    .detailSlide .name {
+        font-size: 34.2px;
+    }
+
+    .detailSlide .bio {
+        font-size: 11.58px;
+    }
+}*/
+
+
+
+
+/* + }}} */
+
+/* + Thumbs {{{ */
+
+.thumbs {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    /*bottom: 92px;*/
+
+    overflow: hidden;
+
+    /* Have no gaps between rows */
+    line-height: 0;
+
+}
+
+/* + + Thumb slide {{{ */
+
+.thumbSlide {
+    display: inline-block;
+    /*width: 25%;*/
+    /*height: 25%;*/
+    width: 12.5vw;
+    /*height: 12.5vw;*/
+    height: calc(25vh - 21.5px);
+
+    box-sizing: border-box;
+    border: 1px solid white;
+
+
+    line-height: normal;
+
+    /* Contain children */
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbSlide.face {
+    cursor: pointer;
+
+}
+
+
+/* Colour image: Hide by default, show when slide is hovered, hide when slide is selected */
+.thumbSlide .thumbImage_colour {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.thumbSlide:hover .thumbImage_colour {
+    opacity: 1;
+}
+.thumbSlide.selected .thumbImage_colour {
+    opacity: 0;
+}
+
+.thumbSlide > img {
+    /* Centre image in container */
+    position: absolute;
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translateX(-50%) translateY(-50%);*/
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* .thumbSlide.face > img {
+    Resize image to cover container
+    min-height: 100%;
+    min-width: 100%;
+
+} */
+
+/* + + }}} */
+
+/* + + Thumb banner {{{ */
+
+.thumbBanner {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+
+    /* background-position: bottom; */
+    background-color: rgba(0, 0, 0, 0.75);
+
+    height: 100%;
+    transition: bottom 0.5s;
+    vertical-align: middle;
+}
+
+.thumbSlide div {
+    text-transform: uppercase;
+}
+
+.thumbSlide:hover .thumbBanner {
+    bottom: -60%;
+}
+.thumbSlide.selected .thumbBanner {
+    bottom: 0;
+}
+
+/* + + }}} */
+
+/* + + Thumb text {{{ */
+
+.thumbText {
+    position: absolute;
+    top: 17.5%;
+    width: 100%;
+    padding-top: 1vh;
+
+    transition: top 0.5s;
+    font-size: 1.8vmin;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1080px) {
+    .thumbText {
+        font-size: 1.1vw;
+    }
+
+}
+
+.thumbSlide.selected .thumbText {
+    /*height: 5.0vw;*/
+    /*position: absolute;*/
+    top: 50%;
+    /*bottom: 50%;*/
+    /*transform: translateZ(0.1px); /*translateY(-1vh);*/
+}
+
+
+
+.thumbText .name, .thumbText .name a {
+    font-family: Hero;
+    color: rgb(177, 140, 12);
+    text-align: center;
+	text-decoration: none;
+}
+
+.thumbText .name a:hover {
+	color: #FFF;
+}
+
+.thumbText .role {
+    font-family: Hero;
+    color: rgb(254, 254, 254);
+    text-align: center;
+}
+
+.closeButton {
+    display: none;
+}
+
+/* + + }}} */
+
+/* + }}} */
+
+
+@media screen and (max-width: 780px) {
+    .detail {
+        width: 95vw;
+        left: 2.5vw;
+        height: 95vh;
+        top: 2.5vh;
+        border: 2px solid #ddd;
+        background: #fff;
+        display:none;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+
+    .detail.show {
+        display: initial;
+    }
+
+    .detailSlide img {
+        max-width: 90%;
+    }
+
+    .detailSlide .role {
+        font-size: 2vh;
+        top: 6vh;
+    }
+
+    .detailSlide .name {
+        top: 10vh;
+    }
+
+    .detailSlide .name .first-name {
+        font-size: 9vh;
+    }
+
+    .detailSlide .name .last-name {
+        font-size: 7vh;
+        line-height: 6.5vh;
+    }
+
+    .detailSlide .bio {
+        font-size: 2.3vw;
+        top: 27vh;
+    }
+
+
+    .detailSlide .bio.noFirstName {
+        top: 18vh;
+    }
+
+    .closeButton {
+        display: block;
+        /*z-index: 100;*/
+        position: absolute;
+        top: 0.5vh;
+        right: 0.5vw;
+        padding: 1vmin;
+        /*font-size: 3vw;*/
+        /*width: 5vw;*/
+        /*height: 5vw;*/
+        color: rgba(0.3,0.3,0.3,0.6);
+        font-size: 6vw;
+    }
+
+    .thumbs {
+        width: 100%;
+        left: 0;
+        height: 100%;
+    }
+
+    .thumbSlide {
+        width: 25vw;
+    }
+
+    .thumbText {
+        font-size: 2.5vmin;
+    }
+}

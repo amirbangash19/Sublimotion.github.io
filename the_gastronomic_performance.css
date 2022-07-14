@@ -1,0 +1,12 @@
+@import url("clip_player.css");
+
+body {
+    background-color: #000;
+    background-image: url('images/tinted_triangles.png');
+}
+
+
+#clipPlayer {
+    /* This is set to match the video aspect ratio */
+    max-width: 256vh;
+}

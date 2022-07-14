@@ -1,0 +1,11 @@
+@import url("clip_player.css");
+
+body {
+    background-color: #000;
+    background-image: url('images/tinted_triangles.png');
+}
+
+
+#clipPlayer {
+    max-width: 177.77777778vh;
+}

@@ -1,0 +1,160 @@
+body {
+    background-color: black;
+}
+
+/* + Background video {{{ */
+
+#clipPlayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#clipPlayer video {
+    /* Video alignment */
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* + }}} */
+
+
+
+
+
+.contact {
+        position: absolute;
+    box-sizing: border-box;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    bottom: 86px;
+    right: 0;
+    /*width: 320px;*/
+    width: 14.286%;
+    min-width: 100px;
+    z-index: 2;
+
+    font-family: Hero;
+    font-weight: 300;
+    font-size: 10.7px;
+
+    text-align: right;
+    line-height: 1.2;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(176, 143, 12);
+}
+
+.contact.expanded {
+    transform: scaleY(1);
+    transition: transform 2s;
+}
+
+@media screen and (min-width: 1000px) {
+    .contact {
+        /*font-size: 0.7vw;*/
+    }
+}
+
+
+/*
+
+.contact hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}*/
+
+.details {
+    font-weight: 300;
+    margin-top: 3px;
+
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.74);
+
+    letter-spacing: 0.095em;
+
+}
+
+.details b {
+    font-weight: 400;
+}
+
+.map {
+padding-bottom: 13px;
+}
+
+.map .fa {
+padding-right: 0.4vw;
+font-size: 200%;
+ position: relative;
+top: 4px
+}
+
+.address1 {
+    text-transform: uppercase;
+}
+
+
+
+.mySocialIcons {
+    font-size: 20px;
+    letter-spacing: 0.28em;
+    padding-top: 10px;
+    padding-bottom: 6px;
+}
+
+.mySocialIcons i:last-child {
+    letter-spacing: 0;
+}
+
+.menuItems {
+    /* Remove default list formatting */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    /* Font style */
+    color: #fff;
+    font-family: Hero;
+    font-size: 12pt;
+    line-height: 25px;
+
+}
+
+@media screen and (max-width: 780px) {
+    body {
+        text-align: center;
+    }
+
+    .contact {
+        position: relative;
+        top: 30vh;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: auto;
+        height: auto;
+        /*display: none;*/
+        font-size: 3vmin;
+        text-align: center;
+        padding: 0em 1em;
+        display: inline-block;
+        line-height: 1.3;
+    }
+}
